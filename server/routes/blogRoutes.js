@@ -10,6 +10,7 @@ blogRouter.get('/all', getAllBlogs);
 blogRouter.get('/:blogId', getBlogById);
 blogRouter.post('/delete', deleteBlogById);
 blogRouter.post('/toggle-publish', auth, togglePublish); 
+blogRouter.post('/comments', auth, getBlogComments); // Fetch comments for a blog
 blogRouter.post('/add-comment', auth, addComment);
 blogRouter.get('/:blogId/comments', getBlogComments);
 
