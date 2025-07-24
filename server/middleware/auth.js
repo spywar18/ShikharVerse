@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken';
-
 const auth = (req, res, next) => {
     const token = req.headers.authorization;
     console.log("Received token:", token);
@@ -11,5 +10,4 @@ const auth = (req, res, next) => {
         res.json({ success: false, message: "Invalid token" })
     }
 }
-
 export default auth;
